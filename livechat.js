@@ -1,5 +1,5 @@
 (function() {
-    const API_BASE_URL = '37.114.37.18/api';
+    const API_BASE_URL = 'http://37.114.37.18:8080/api';
 
     let chatState = {
         isOpen: false,
@@ -380,6 +380,7 @@
         startPolling();
     }
 })();
+
 
 
 
