@@ -1,5 +1,5 @@
 (function() {
-    const API_BASE_URL = ' https://90a4021ab95a.ngrok-free.app/api';
+    const API_BASE_URL = '37.114.37.18/api';
 
     let chatState = {
         isOpen: false,
@@ -380,5 +380,6 @@
         startPolling();
     }
 })();
+
 
 
