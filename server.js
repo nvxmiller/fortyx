@@ -6,7 +6,11 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST'],
+    credentials: true
+}));
 app.use(express.json());
 app.use(express.static('.'));
 const rateLimiter = rateLimit({
@@ -535,7 +539,8 @@ app.get('/tos', (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on http://37.114.37.18:${PORT}`);
+    console.log(`Server accessible at http://0.0.0.0:${PORT}`);
     console.log(`Discord webhook ${DISCORD_WEBHOOK_URL ? 'configured' : 'NOT configured'}`);
 });
