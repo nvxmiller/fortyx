@@ -1,5 +1,5 @@
 (function() {
-    const API_BASE_URL = 'https://api.fortyx.net/api';
+    const API_BASE_URL = 'http://37.114.37.18:3000/api';
 
     let chatState = {
         isOpen: false,
@@ -380,3 +380,4 @@
         startPolling();
     }
 })();
+
