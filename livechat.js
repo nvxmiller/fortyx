@@ -1,5 +1,5 @@
 (function() {
-    const API_BASE_URL = 'https://fortyx.net/api';
+    const API_BASE_URL = 'https://api.fortyx.net/api';
 
     let chatState = {
         isOpen: false,
@@ -380,8 +380,3 @@
         startPolling();
     }
 })();
-
-
-
-
-
